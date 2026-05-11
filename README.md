@@ -1,6 +1,6 @@
-# storeTools
+# store_tools
 
-`storeTools` is a small Python console application designed to assist with the management of a small business.
+`store_tools` is a small Python console application designed to assist with the management of a small business.
 
 ## Features
 
@@ -13,6 +13,6 @@ This application provides the following functionalities:
 
 ## How to Use
 
-1. Clone the repository: `git clone https://github.com/ignahrz98/storeTools.git`
-2. Navigate to the project directory: `cd storeTools`
+1. Clone the repository: `git clone https://github.com/ignahrz98/store_tools.git`
+2. Navigate to the project directory: `cd store_tools`
 3. Run the application: `python main.py`
