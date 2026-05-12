@@ -20,7 +20,7 @@ tools_menu = tk.Menu(top_menu, tearoff=0)
 top_menu.add_cascade(label="Tools", menu=tools_menu)
 tools_menu.add_command(label="Calculate earning")
 tools_menu.add_command(label="Currency converter")
-tools_menu.add_command(label="Digital weight")
+tools_menu.add_command(label="Digital weight", command=lambda: digital_weight_tool.toplevel_digital_weight_tool(window))
 
 config_menu = tk.Menu(top_menu, tearoff=0)
 top_menu.add_cascade(label="Config", menu=config_menu)
@@ -32,7 +32,7 @@ try:
 		data = json.load(file_dolar_value)
 		dolar_value = data["dolar_value"]
 
-		print("Valor del dólar cargado desde el archivo.")
+		print("Dolar value loaded from file") 
 except:
 	data = {
 		"dolar_value": 0.0
@@ -41,7 +41,7 @@ except:
 	# Create file for dolar_value
 	with open("data/dolar_value.json", "w") as file_dolar_value:
 		json.dump(data, file_dolar_value, indent=4)
-		print("El archivo para valor del dólar ha sido creado")
+		print("File for dolar value have been created")
 
 	dolar_value = data["dolar_value"]
 
@@ -49,6 +49,7 @@ label_dolar_value = tk.Label(text=f"Dolar ($1): {dolar_value}")
 label_dolar_value.pack()
 
 # Show the main menu.
+"""
 while True:
 	option = main_menu_app.get_menu(dolar_value)
 
@@ -67,5 +68,5 @@ while True:
 		dolar_value = dolar_value_tool.set_tool(dolar_value)
 	elif option == 5:
 		break
-
+"""
 window.mainloop()
