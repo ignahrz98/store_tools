@@ -84,7 +84,7 @@ def toplevel_currency_converter(window_parent):
 	global combobox_select_operation
 	combobox_select_operation = ttk.Combobox(tl_window, state="readonly")
 	combobox_select_operation.pack()
-	elements_combobox_select_operation = ["Convert from dolar", "Convert to dolar"]
+	elements_combobox_select_operation = ["Convert from dollar", "Convert to dollar"]
 	combobox_select_operation["values"] = elements_combobox_select_operation
 
 	label_amount = tk.Label(tl_window, text="Introduce amount")

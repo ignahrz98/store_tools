@@ -44,12 +44,12 @@ def tool_action(text_variable_dolar_value):
 		with open("data/dolar_value.json", "w") as file_dolar_value:
 			json.dump(data, file_dolar_value, indent=4)
 			print("Dolar value updated")
-			label_message.config(text="Dolar has been updated", fg="#135821")
+			label_message.config(text="Dollar has been updated", fg="#135821")
 
-			text_variable_dolar_value.set(f"Dolar ($1): {dolar_value_update}")
+			text_variable_dolar_value.set(f"Dollar ($1): {dolar_value_update}")
 	except ValueError:
 		print("Value for dolar is not valid")
-		label_message.config(text="Dolar value is not valid", fg="#4B0404")
+		label_message.config(text="Dollar value is not valid", fg="#4B0404")
 
 def toplevel_dolar_value(window_parent, dolar_value_current, text_variable_dolar_value):
 	tl_window = tk.Toplevel(window_parent)
@@ -58,13 +58,13 @@ def toplevel_dolar_value(window_parent, dolar_value_current, text_variable_dolar
 	tl_window.resizable(False, False)
 	tl_window.grab_set()
 
-	print(f"Dolar value: {dolar_value_current}")
+	print(f"Dollar value: {dolar_value_current}")
 	#text_variable_dolar_value.set("working")
 
-	label_title = tk.Label(tl_window, text="Dolar value", font=("TkDefaultFont",10, "bold"))
+	label_title = tk.Label(tl_window, text="Dollar value", font=("TkDefaultFont",10, "bold"))
 	label_title.pack(pady=(0,10))
 
-	label_dolar = tk.Label(tl_window, text="Introduce dolar value ($1)")
+	label_dolar = tk.Label(tl_window, text="Introduce dollar value ($1)")
 	label_dolar.pack()
 
 	global entry_dolar

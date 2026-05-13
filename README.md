@@ -1,6 +1,6 @@
 # store_tools
 
-`store_tools` is a small Python console application designed to assist with the management of a small business.
+`store_tools` is a small Python GUI application designed to assist with the management of a small business.
 
 ## Features
 
