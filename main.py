@@ -19,7 +19,7 @@ window.config(menu=top_menu)
 tools_menu = tk.Menu(top_menu, tearoff=0)
 top_menu.add_cascade(label="Tools", menu=tools_menu)
 tools_menu.add_command(label="Calculate earning", command=lambda: calculate_earning_tool.toplevel_calculate_earning_tool(window))
-tools_menu.add_command(label="Currency converter")
+tools_menu.add_command(label="Currency converter", command=lambda: currency_converter_tool.toplevel_currency_converter(window))
 tools_menu.add_command(label="Digital weight", command=lambda: digital_weight_tool.toplevel_digital_weight_tool(window))
 
 config_menu = tk.Menu(top_menu, tearoff=0)
