@@ -51,12 +51,23 @@ def tool_action(text_variable_dolar_value):
 		print("Value for dolar is not valid")
 		label_message.config(text="Dollar value is not valid", fg="#4B0404")
 
-def toplevel_dolar_value(window_parent, dolar_value_current, text_variable_dolar_value):
+def toplevel_dolar_value(window_parent, text_variable_dolar_value):
 	tl_window = tk.Toplevel(window_parent)
 	tl_window.title("Tool")
 	tl_window.geometry("400x300")
 	tl_window.resizable(False, False)
 	tl_window.grab_set()
+
+	# Load dolar value from file
+	try:
+		with open("data/dolar_value.json", "r") as file_dolar_value:
+			data = json.load(file_dolar_value)
+			dolar_value_current = data["dolar_value"]
+
+			print("Dolar value loaded from file")
+	except:
+		print("Data for dolar value can't be loaded")
+		dolar_value_current = 0.0
 
 	print(f"Dollar value: {dolar_value_current}")
 	#text_variable_dolar_value.set("working")

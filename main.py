@@ -24,7 +24,7 @@ tools_menu.add_command(label="Digital weight", command=lambda: digital_weight_to
 
 config_menu = tk.Menu(top_menu, tearoff=0)
 top_menu.add_cascade(label="Config", menu=config_menu)
-config_menu.add_command(label="Update dollar value", command=lambda: dolar_value_tool.toplevel_dolar_value(window, dolar_value, text_variable_dolar_value))
+config_menu.add_command(label="Update dollar value", command=lambda: dolar_value_tool.toplevel_dolar_value(window, text_variable_dolar_value))
 
 # Get the dolar_value from the file.
 try:
