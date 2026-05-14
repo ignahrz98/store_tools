@@ -1,2 +1,7 @@
 # Ignore Python cache directories
 __pycache__/
+
+# Ignore PyInstaller files
+build/
+dist/
+*.spec
